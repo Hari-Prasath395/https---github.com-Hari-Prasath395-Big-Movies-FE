@@ -1,13 +1,186 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,700&display=swap');
+
+
+*{
+  font-family: 'Philosopher', sans-serif;
+ 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color:#fff;
+
+  /* background-image: url('https://images.pexels.com/photos/274937/pexels-photo-274937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-repeat: no-repeat;
+  background-position: cover; */
+}
+
+.card{
+  background-color: whitesmoke;
+  border: 1px solid blue;
+  padding: 10px;
+  min-height: 300px;
+  min-width: 350px;
+}
+input:focus{
+  outline: none;
+}
+
+
+/* Spinner*/
+
+.loader-parent{
+  position: fixed;
+  background-color: black;
+  inset: 0;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.loader{
+  height: 30px;
+  width: 30px;
+  border: 3px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: loader-animation 1s linear infinite;
+
+}
+
+@keyframes loader-animation {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+.content{
+  min-height: 90vh;
+  border: 2px solid black;
+}
+
+.modal-dialog{
+  width: 80vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid rgb(132, 130, 130);
+  /* background-color:white; */
+}
+
+.header-left {
+  flex-grow: 1;
+  margin-right: 20px;
+  
+}
+
+.header-middle {
+  flex-grow: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header-right {
+  flex-grow: 1;
+  text-align: right;
+  line-height: 6px;
+}
+
+/* seats*/
+
+/* .seat{
+  height: 35px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  cursor: pointer;
+  color: rgb(125, 105, 105);
+
+}
+
+.selected-seat{
+  background-color: green;
+  color: white;
+}
+
+
+.booked-seat{
+  background-color:gray;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .seat {
+    height: 30px;
+    width: 35px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .seat {
+    height: 25px;
+    width: 30px;
+    font-size: 10px;
+  }
+} */
+
+.card {
+  padding: 10px;
+
+  overflow: auto; /* Add overflow property to enable scrolling within the card */
+}
+
+.seat-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow seats to wrap to the next line */
+  justify-content: center;
+}
+
+.seat {
+  height: 35px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  cursor: pointer;
+  color: rgb(125, 105, 105);
+}
+
+.selected-seat {
+  background-color: rgb(128, 66, 0);
+  color: white;
+}
+
+.booked-seat {
+  background-color: rgb(50, 174, 81);
+  color: white;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+  .seat {
+    height: 30px;
+    width: 35px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .seat {
+    height: 25px;
+    width: 30px;
+    font-size: 10px;
+  }
 }

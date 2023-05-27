@@ -1,0 +1,29 @@
+/* MoviesForm.css */
+
+@media (max-width: 767px) {
+   
+    
+    .form-control,
+    .form-select {
+      font-size: 14px;
+    }
+    
+  
+    .form-label {
+      font-size: 14px;
+    }
+    
+  
+    .card-title {
+      font-size: 18px;
+    }
+    
+   
+    .card-footer button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+    
+   
+  }
+  

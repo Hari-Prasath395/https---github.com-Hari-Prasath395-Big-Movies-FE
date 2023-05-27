@@ -1,0 +1,32 @@
+/* TheatersList.css */
+
+@media (max-width: 767px) {
+    /* Styles for mobile devices */
+    
+    /* Adjust table styles */
+    table {
+      font-size: 14px;
+    }
+    
+    /* Hide table headers on mobile */
+    table thead {
+      display: none;
+    }
+    
+    /* Display table row items as block elements */
+    table tbody tr {
+      display: block;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    
+    /* Adjust table cell styles */
+    table tbody td {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px;
+    }
+  }
+  

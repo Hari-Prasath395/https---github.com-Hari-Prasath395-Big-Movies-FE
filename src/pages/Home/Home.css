@@ -1,0 +1,26 @@
+/* Home.css */
+
+@media (max-width: 767px) {
+    /* Styles for mobile devices */
+    
+    /* Adjust movie grid layout */
+    .row.g-3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    /* Adjust movie card styles */
+    .col-md-2.mb-3 {
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 16px;
+    }
+    
+    /* Adjust movie poster styles */
+    .col-md-2.mb-3 img {
+      height: auto;
+      width: 100%;
+    }
+  }
+  

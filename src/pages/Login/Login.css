@@ -1,0 +1,23 @@
+/* Login.css */
+
+@media (max-width: 767px) {
+    /* Styles for mobile devices */
+    
+    /* Adjust card styles */
+    .card {
+      width: 100%;
+      max-width: 400px;
+      padding: 16px;
+    }
+    
+    /* Adjust form input styles */
+    .form-control {
+      width: 100%;
+    }
+    
+    /* Adjust login button styles */
+    .btn-primary {
+      width: 100%;
+    }
+  }
+  
