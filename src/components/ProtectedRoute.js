@@ -57,7 +57,7 @@ function ProtectedRoute({ children }) {
   const getCurrentUser = async () => {
     try {
       dispatch(showLoading());
-      const response = await axios.get('http://localhost:8000/api/users/getCurrentUser', {
+      const response = await axios.get('https://big-movies-backend.onrender.com/api/users/getCurrentUser', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
