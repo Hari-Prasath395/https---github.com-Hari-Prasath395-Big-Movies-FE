@@ -154,7 +154,7 @@ const BookShow = () => {
             <StripeCheckout
               token={onToken}
               amount={selectedSeats.length * show.ticketPrice * 100}
-              stripeKey="pk_test_51NA79xSAQxzsriZxdwVFxbcFgkiUcRmNEllMDJd2s5KJ78yGuNtJWNmSKFccLlCFhCrqQQOnRpIa0UU7pD5Oh2uZ00TzIBzXCs"
+              stripeKey="pk_test_51NA79xSAQxzsriZx8x7U7znJcfPrHGG46g4ppBwJJ4eQOzGXPFCwkZCpJevGbivDXCCUCSu4rXAWOrSWCHLxIM71000vlxsDwu"
             >
               <button className="btn btn-warning">Book Now</button>
             </StripeCheckout>
