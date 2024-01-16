@@ -22,7 +22,7 @@ const MovieTheater = () => {
     try {
       dispatch(showLoading());
       const response = await axios.get(
-        `http://localhost:8000/api/movies/movieId/${movieId}?date=${date}`
+        `https://big-movies-backend.onrender.com/api/movies/movieId/${movieId}?date=${date}`
       );
       if (response.data) {
         setMovie(response.data);
@@ -41,7 +41,7 @@ const fetchTheaters = async () => {
     try {
       dispatch(showLoading());
       const response = await axios.post(
-        "http://localhost:8000/api/theater/getAllTheatersByMovie",
+        "https://big-movies-backend.onrender.com/api/theater/getAllTheatersByMovie",
         { movie: movieId, date }
       );
       if (response.data && Array.isArray(response.data.data)) {

@@ -35,7 +35,7 @@ const TheaterForm = ({ closeModal, formType, selectedTheater,fetchTheaters }) =>
       if (formType === 'add') {
         dispatch(showLoading());
         response = await axios.post(
-          'http://localhost:8000/api/theater/addTheater',
+          'https://big-movies-backend.onrender.com/api/theater/addTheater',
           {
             name: formData.name,
             address: formData.address,
@@ -52,7 +52,7 @@ const TheaterForm = ({ closeModal, formType, selectedTheater,fetchTheaters }) =>
       } else {
         dispatch(showLoading());
         response = await axios.put(
-          `http://localhost:8000/api/theater/update/${selectedTheater._id}`,
+          `https://big-movies-backend.onrender.com/api/theater/update/${selectedTheater._id}`,
           {
             name: formData.name,
             address: formData.address,

@@ -33,7 +33,7 @@ const TheatersList = () => {
     try {
       dispatch(showLoading());
       const response = await axios.get(
-        "http://localhost:8000/api/theater/getTheaters"
+        "https://big-movies-backend.onrender.com/api/theater/getTheaters"
       );
       if (Array.isArray(response.data.data)) {
         setTheaters(response.data.data);
@@ -51,7 +51,7 @@ const TheatersList = () => {
     try {
       dispatch(showLoading());
       await axios.delete(
-        `http://localhost:8000/api/theater/deleteTheater/${theaterId}`
+        `https://big-movies-backend.onrender.com/api/theater/deleteTheater/${theaterId}`
       );
       fetchTheaters(); // Fetch updated theater list
       dispatch(hideLoading());

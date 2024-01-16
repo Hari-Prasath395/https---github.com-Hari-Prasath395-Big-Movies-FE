@@ -40,7 +40,7 @@ const MoviesForm = ({ closeModal, formType, selectedMovie,fetchMovies }) => {
       let response = null;
       if (formType === 'add') {
         dispatch(showLoading());
-        response = await axios.post('http://localhost:8000/api/movies/addMovie', {
+        response = await axios.post('https://big-movies-backend.onrender.com/api/movies/addMovie', {
           Title: formData.title,
           Description: formData.description,
           Duration: formData.duration,
@@ -55,7 +55,7 @@ const MoviesForm = ({ closeModal, formType, selectedMovie,fetchMovies }) => {
         });dispatch(hideLoading());
       }else{
         dispatch(showLoading());
-        response = await axios.put(`http://localhost:8000/api/movies/updateMovie/${selectedMovie._id}`, {
+        response = await axios.put(`https://big-movies-backend.onrender.com/api/movies/updateMovie/${selectedMovie._id}`, {
        
           Title: formData.title,
           Description: formData.description,

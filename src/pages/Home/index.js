@@ -16,7 +16,7 @@ const Home = () => {
     try {
       dispatch(showLoading());
       const response = await axios.get(
-        "http://localhost:8000/api/movies/getAllMovies"
+        "https://big-movies-backend.onrender.com/api/movies/getAllMovies"
       );
       if (Array.isArray(response.data.data)) {
         setMovies(response.data.data);

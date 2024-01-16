@@ -31,7 +31,7 @@ const Login = () => {
     try {
       dispatch(showLoading());
       const response = await axios.post(
-        "http://localhost:8000/api/users/login",
+        "https://big-movies-backend.onrender.com/api/users/login",
         data
       );
       dispatch(hideLoading());

@@ -34,7 +34,7 @@ const Register = () => {
     try {
       dispatch(showLoading());
       const response = await axios.post(
-        "http://localhost:8000/api/users/register",
+        "https://big-movies-backend.onrender.com/api/users/register",
         data
       );
 

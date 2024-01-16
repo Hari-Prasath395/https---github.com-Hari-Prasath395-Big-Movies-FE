@@ -19,7 +19,7 @@ const Bookings = () => {
     try {
       dispatch(showLoading());
       const response = await axios.get(
-        "http://localhost:8000/api/bookings/get-all-bookings"
+        "https://big-movies-backend.onrender.com/api/bookings/get-all-bookings"
       );
       if (response.data.success) {
         setBookings(response.data.data);

@@ -55,7 +55,7 @@ const Shows = () => {
       const data = { ...showData, theater: theaterId }; // Use theaterId instead of theaterName
       dispatch(showLoading());
       const response = await axios.post(
-        "http://localhost:8000/api/theater/addShow",
+        "https://big-movies-backend.onrender.com/api/theater/addShow",
         data
       );
 
@@ -81,7 +81,7 @@ const Shows = () => {
     try {
       dispatch(showLoading());
       await axios.delete(
-        `http://localhost:8000/api/theater/deleteShow/${showId}`
+        `https://big-movies-backend.onrender.com/api/theater/deleteShow/${showId}`
       );
 
       setShows((prevShows) => prevShows.filter((show) => show._id !== showId));
@@ -103,7 +103,7 @@ const Shows = () => {
     try {
       dispatch(showLoading());
       const response = await axios.get(
-        "http://localhost:8000/api/movies/getAllMovies"
+        "https://big-movies-backend.onrender.com/api/movies/getAllMovies"
       );
 
       if (Array.isArray(response.data.data)) {
@@ -121,7 +121,7 @@ const Shows = () => {
     try {
       dispatch(showLoading());
       const response = await axios.get(
-        `http://localhost:8000/api/theater/getShowsByTheater/${theaterId}`
+        `https://big-movies-backend.onrender.com/api/theater/getShowsByTheater/${theaterId}`
       );
       if (Array.isArray(response.data.data)) {
         setShows(response.data.data);

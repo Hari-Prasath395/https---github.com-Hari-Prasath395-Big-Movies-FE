@@ -18,7 +18,7 @@ const BookShow = () => {
 
   const fetchShow = async () => {
     try {
-      const response = await axios.post("http://localhost:8000/api/theater/getShowById", {
+      const response = await axios.post("https://big-movies-backend.onrender.com/api/theater/getShowById", {
         showId: showId
       });
       if (response.data.success) {
@@ -82,7 +82,7 @@ const BookShow = () => {
   const onToken = async (token) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/bookings/make-payment",
+        "https://big-movies-backend.onrender.com/api/bookings/make-payment",
         {
           token: token,
           amount: selectedSeats.length * show.ticketPrice * 100
@@ -102,7 +102,7 @@ const BookShow = () => {
 
   const book = async (transactionId) => {
     try {
-      const response = await axios.post("http://localhost:8000/api/bookings/bookshow", {
+      const response = await axios.post("https://big-movies-backend.onrender.com/api/bookings/bookshow", {
         show: showId,
         seats: selectedSeats,
         transactionId: transactionId,

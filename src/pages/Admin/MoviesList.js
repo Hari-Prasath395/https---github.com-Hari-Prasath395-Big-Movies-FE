@@ -27,7 +27,7 @@ export default function MoviesList() {
     try {
       dispatch(showLoading());
       const response = await axios.get(
-        "http://localhost:8000/api/movies/getAllMovies"
+        "https://big-movies-backend.onrender.com/api/movies/getAllMovies"
       );
       if (Array.isArray(response.data.data)) {
         setMovies(response.data.data);
@@ -45,7 +45,7 @@ export default function MoviesList() {
     try {
       dispatch(showLoading());
       await axios.delete(
-        `http://localhost:8000/api/movies/deleteMovie/${movieId}`
+        `https://big-movies-backend.onrender.com/api/movies/deleteMovie/${movieId}`
       );
       // Movie deleted successfully,
       fetchMovies(); // Fetch updated movie list
