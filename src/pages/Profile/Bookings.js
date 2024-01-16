@@ -55,8 +55,10 @@ const Bookings = () => {
         <tbody>
           {bookings.map((booking) => (
             <tr key={booking._id}>
-              <td>{booking.show.movie.Title}-{booking.show.movie.Language}</td>
-              <td>{booking.show.theater.name}-{booking.show.theater.address}</td>
+              <td>{booking.show.movie?.Title}-{booking.show.movie?.Language}</td>
+              <td>{booking.show.theater?.name}-{booking.show.theater?.address}</td>
+              {/* <td>{booking.show.movie.Title}-{booking.show.movie.Language}</td>
+              <td>{booking.show.theater.name}-{booking.show.theater.address}</td> */}
               <td>{moment(booking.show.date).format("MMMM DD, YYYY")}</td>
               <td>{moment(booking.show.time, "HH:mm").format("h:mm A")}</td>
               <td>Rs: {booking.show.ticketPrice}</td>
